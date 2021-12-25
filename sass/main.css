@@ -106,7 +106,7 @@ textarea {
 
 .section-title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 28px;
@@ -117,7 +117,7 @@ textarea {
 @media screen and (min-width: 1200px) {
   .section-title {
     font-size: 36px;
-    line-height: 1.71;
+    margin-bottom: 50px;
   }
 }
 
@@ -193,7 +193,7 @@ textarea {
   min-width: 450px;
   border-radius: 4px;
   background-color: var(--primary-white-color);
-  padding: 41px;
+  padding: 40px;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
   -webkit-transition: -webkit-transform 250ms var(--timing-function);
@@ -241,7 +241,7 @@ textarea {
 
 /* Logo */
 .logo {
-  margin-right: 93px;
+  margin-right: 88px;
   padding-top: 24px;
   padding-bottom: 25px;
   color: #000000;
@@ -253,6 +253,7 @@ textarea {
 
 @media screen and (min-width: 1200px) {
   .logo {
+    margin-right: 93px;
     font-size: 26px;
     line-height: 1.19;
   }
@@ -577,7 +578,6 @@ textarea {
 @media screen and (min-width: 480px) {
   .overlay {
     width: 480px;
-    height: 400px;
   }
 }
 
@@ -591,7 +591,6 @@ textarea {
 @media screen and (min-width: 768px) {
   .overlay {
     width: 768px;
-    height: 400px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero-tablet.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-tablet.jpg);
   }
@@ -607,7 +606,6 @@ textarea {
 @media screen and (min-width: 1200px) {
   .overlay {
     width: 100%;
-    height: 600px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero.jpg);
   }
@@ -621,9 +619,21 @@ textarea {
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
   text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .hero {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .hero__title-container {
@@ -662,7 +672,7 @@ textarea {
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .hero__title {
     font-size: 44px;
     line-height: 1.36;
@@ -691,7 +701,13 @@ textarea {
 }
 
 /* Benefits */
-@media screen and (min-width: 768px), (min-width: 1200px) {
+@media screen and (max-width: 768px) {
+  .benefit-list {
+    margin-bottom: -30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .benefit-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -699,6 +715,12 @@ textarea {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-left: -30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .benefit-list__item {
+    margin-bottom: 30px;
   }
 }
 
@@ -742,7 +764,7 @@ textarea {
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .benefit-list__title {
     text-align: center;
   }
@@ -797,7 +819,7 @@ textarea {
   background-color: var(--primary-bg-color);
 }
 
-@media screen and (max-width: 480px), (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .team-list {
     margin-bottom: -30px;
   }
@@ -819,7 +841,7 @@ textarea {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (max-width: 480px), (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .team-list__item {
     margin-bottom: 30px;
   }
@@ -1133,7 +1155,12 @@ textarea {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--secondary-bg-color);
-  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1152,19 +1179,23 @@ textarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
   }
 }
 
-.footer__address-box {
-  margin-bottom: 60px;
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1200px) {
   .footer__address-box {
-    margin-right: 165px;
+    margin-bottom: 60px;
   }
 }
 
@@ -1318,181 +1349,5 @@ textarea {
 
 .footer__icon-send {
   margin-left: 10px;
-}
-
-.contact-form {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.contact-form__header {
-  color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  margin-bottom: 12px;
-}
-
-.contact-form__field {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.contact-form__input-box {
-  position: relative;
-  display: block;
-}
-
-.contact-form__label {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  margin-bottom: 4px;
-}
-
-.contact-form__input {
-  width: 100%;
-  min-height: 40px;
-  margin: 0;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  padding-left: 38px;
-  padding-right: 12px;
-  -webkit-transition: border 250ms var(--timing-function);
-  transition: border 250ms var(--timing-function);
-}
-
-.contact-form__input:focus {
-  outline: none;
-  border: 1px solid var(--accent-color);
-}
-
-.contact-form__comment {
-  width: 100%;
-  min-height: 40px;
-  margin: 0;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  padding: 12px 16px;
-}
-
-.contact-form__comment::-webkit-input-placeholder {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.contact-form__comment:-ms-input-placeholder {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.contact-form__comment::-ms-input-placeholder {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.contact-form__comment::placeholder {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.contact-form__comment:focus {
-  outline: none;
-  border: 1px solid var(--accent-color);
-}
-
-.contact-form__icon {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: fill 250ms var(--timing-function);
-  transition: fill 250ms var(--timing-function);
-}
-
-.contact-form__input:focus ~ .contact-form__icon {
-  fill: var(--accent-color);
-}
-
-.contact-form__policy-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.contact-form__policy-checkbox {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.contact-form__checkbox-icon {
-  display: block;
-  width: 16px;
-  height: 15px;
-  margin-left: 12px;
-  margin-right: 8px;
-  border: 2px solid var(--title-text-color);
-  border-radius: 2px;
-}
-
-.contact-form__policy-checkbox:checked + .contact-form__checkbox-icon {
-  border-color: var(--accent-color);
-  background-color: var(--accent-color);
-  background-size: contain;
-  background-origin: border-box;
-}
-
-.contact-form__policy-text {
-  line-height: 1.71;
-}
-
-.contact-form__policy-link {
-  color: var(--accent-color);
-}
-
-.contact-form__button-container {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 30px;
-}
-
-.contact-form__send-button {
-  min-width: 200px;
-  min-height: 50px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
 }
 /*# sourceMappingURL=main.css.map */

@@ -101,11 +101,14 @@
   display: block;
   width: 16px;
   height: 15px;
-  margin-left: 12px;
-  margin-right: 8px;
 
+  margin-right: 8px;
   border: 2px solid var(--title-text-color);
   border-radius: 2px;
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 12px;
+  }
 }
 
 .contact-form__policy-checkbox:checked + .contact-form__checkbox-icon {
@@ -116,7 +119,12 @@
 }
 
 .contact-form__policy-text {
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .contact-form__policy-link {

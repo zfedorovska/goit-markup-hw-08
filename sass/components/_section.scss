@@ -15,7 +15,7 @@
 
 .section-title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   color: var(--title-text-color);
   font-weight: 700;
@@ -24,7 +24,7 @@
   text-align: center;
   @media screen and (min-width: $desktop) {
     font-size: 36px;
-    line-height: 1.71;
+    margin-bottom: 50px;
   }
 }
 

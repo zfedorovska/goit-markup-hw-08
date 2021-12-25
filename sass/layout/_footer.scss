@@ -4,7 +4,10 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--secondary-bg-color);
-  text-align: center;
+
+  @media screen and (max-width: $desktop) {
+    text-align: center;
+  }
 }
 
 .footer-container {
@@ -17,14 +20,16 @@
 .footer-tablet-container {
   @media screen and (min-width: $tablet) {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: baseline;
   }
 }
 
 .footer__address-box {
-  margin-bottom: 60px;
-  @media screen and (min-width: $tablet) {
-    margin-right: 165px;
+  @media screen and (max-width: $desktop) {
+    margin-bottom: 60px;
   }
   @media screen and (min-width: $desktop) {
     margin-right: 70px;
